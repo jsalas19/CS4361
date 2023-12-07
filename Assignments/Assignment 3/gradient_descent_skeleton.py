@@ -42,9 +42,9 @@ print('Your loss = %3.3f'%(loss))
 
 def change_in_loss(data_x,data_y,gradients,phi,lr=0.01):
   #Implement this function
-  new_phi = np.array([0,0,0]) #implement
-  loss = 0 #implement
-  loss_new = 0 #implement
+  new_phi = phi - lr * gradients #implement
+  loss = compute_loss(data_x, data_y, phi)
+  loss_new = compute_loss(data_x, data_y, new_phi)
   print('Difference between old loss {} and new loss {}'.format(loss,loss_new))
 
 
@@ -53,11 +53,11 @@ def change_in_loss(data_x,data_y,gradients,phi,lr=0.01):
 
 def compute_gradient(data_x, data_y, phi,d=0.005):
 
-    dl_dphi0 = 0.0
-    dl_dphi1 = 0.0
-    dl_dphi2 = 0.0
+    dl_dphi0 = (compute_loss(data_x, data_y, phi + np.array([[d], [0], [0]])) - compute_loss(data_x, data_y, phi)) / d
+    dl_dphi1 = (compute_loss(data_x, data_y, phi + np.array([[0], [d], [0]])) - compute_loss(data_x, data_y, phi)) / d
+    dl_dphi2 = (compute_loss(data_x, data_y, phi + np.array([[0], [0], [d]])) - compute_loss(data_x, data_y, phi)) / d
 
-    d = 0.005
+    #d = 0.005
     #implement this function
     # Return the gradient
     return np.array([[dl_dphi0],[dl_dphi1],[dl_dphi2]])
