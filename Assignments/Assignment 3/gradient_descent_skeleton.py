@@ -66,6 +66,6 @@ def compute_gradient(data_x, data_y, phi,d=0.005):
 # Compute the gradient using your function
 
 gradients = compute_gradient(data[0,:],data[1,:], phi)
-change_in_loss = change_in_loss(data[0,:],data[1,:],gradients,phi)
+change_in_los = change_in_loss(data[0,:],data[1,:],gradients,phi)
 
 
