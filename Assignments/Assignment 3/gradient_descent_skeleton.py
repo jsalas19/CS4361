@@ -1,3 +1,11 @@
+
+
+# Name:  Joshua Salas
+# Student  ID: 80644497
+# Email:  jsalas19@miners.utep.edu
+
+
+
 # -*- coding: utf-8 -*-
 
 
