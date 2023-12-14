@@ -1,3 +1,9 @@
+'''
+Name: Joshua Salas
+Student ID: 80644497
+Student Email: jsalas19@miners.utep.edu
+'''
+
 from collections import Counter
 import numpy as np
 
